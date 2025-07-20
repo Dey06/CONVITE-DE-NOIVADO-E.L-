@@ -1,0 +1,295 @@
+body {
+    font-family: 'Georgia', serif;
+    background-size: cover;
+    background-position: top;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    background: url('https://i.imgur.com/1ovtMSC.jpeg');
+    background-size: contain;
+    border: 2px solid #8c9b84;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(140, 155, 132, 0.3);
+    text-align: center;
+}
+
+.container2 {
+    background-color: #3f473e65;
+    padding: 40px;
+}
+
+.top-flower {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+h2.couple {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #fff;
+    font-family: 'Palatino Linotype', serif;
+}
+
+h3 {
+    color: #fff;
+    margin-top: 30px;
+    font-family: 'Georgia', serif;
+}
+
+p.intro {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #fff;
+}
+
+p.details {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 25px 0;
+    color: #fff;
+    font-size: 1.2em;
+    background: #eef0e6;
+    padding: 15px;
+    border-left: 5px solid #8c9b84;
+    border-radius: 8px;
+}
+
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #8c9b84;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+}
+
+a.button img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+a.button:hover {
+    background-color: #78876c;
+}
+
+audio {
+    margin-top: 25px;
+}
+
+/* Lista de convidados estilizada */
+.guest-list {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 18px rgba(140, 155, 132, 0.18);
+    padding: 30px 20px;
+    margin: 35px auto 0 auto;
+    max-width: 500px;
+    border: 1.5px solid #e3e6db;
+}
+
+.guest-list h2 {
+    color: #274525;
+    font-family: 'Palatino Linotype', serif;
+    font-size: 2em;
+    margin-bottom: 18px;
+}
+
+.guest-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.guest-list li {
+    position: relative;
+    font-size: 1.15em;
+    color: #274525;
+    font-family: 'Georgia', serif;
+    margin: 10px 0;
+    padding-left: 28px;
+    transition: background 0.2s, transform 0.2s;
+    border-radius: 8px;
+}
+
+.guest-list li::before {
+    content: "\2764";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #e57373;
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+
+.guest-list li:hover {
+    background: #f5f3ed;
+    transform: scale(1.03);
+}
+
+.countdowngeral {
+    width: 70%;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    justify-content: center;
+    align-self: center;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    font-size: 20px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #3a6237;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    opacity: 0;
+    margin: 5px;
+}
+
+.countdown-item.show {
+    animation: fadein 1s forwards;
+}
+
+.countdown-item::before {
+    position: absolute;
+    content: ' ';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    opacity: .1;
+}
+
+.countdown-item.days {
+    animation-delay: 1s;
+}
+
+.countdown-item.hours {
+    animation-delay: 1.5s;
+}
+
+.countdown-item.minutes {
+    animation-delay: 2s;
+}
+
+.countdown-item.seconds {
+    animation-delay: 2.5s;
+}
+
+.countdown-item.days::after {
+    content: attr(data-days);
+}
+
+.countdown-item.hours::after {
+    content: attr(data-hours);
+}
+
+.countdown-item.minutes::after {
+    content: attr(data-minutes);
+}
+
+.countdown-item.seconds::after {
+    content: attr(data-seconds);
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+        background-position: center;
+    }
+
+    .container {
+        max-width: auto;
+        /* max-width: 98vw; */
+        padding: 16px 4px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    #listaC {
+        color: #274525;
+    }
+
+    h2.couple,
+    .guest-list h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1em;
+        margin-top: 18px;
+    }
+
+    p.intro,
+    p.details,
+    blockquote {
+        font-size: 1em;
+    }
+
+    .guest-list {
+        max-width: 98vw;
+        padding: 16px 6px;
+        margin: 18px auto 0 auto;
+        border-radius: 10px;
+    }
+
+    .guest-list li {
+        font-size: 1em;
+        padding-left: 22px;
+        margin: 7px 0;
+    }
+
+    a.button {
+        padding: 8px 10px;
+        font-size: 0.95em;
+    }
+
+    iframe {
+        width: 98vw !important;
+        height: 220px !important;
+        min-width: 0;
+        max-width: 100vw;
+    }
+}
